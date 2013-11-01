@@ -1,28 +1,13 @@
 set nocompatible
 
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
+" Attempt to determine the type of a file based on its name and possibly its contents.
 filetype indent plugin on
 
 " Enable syntax highlighting
 syntax on
 
-" One such option is the 'hidden' option, which allows you to re-use the same
-" window and switch from an unsaved buffer without saving it first. Also allows
-" you to keep an undo history for multiple files when re-using the same window
-" in this way. Note that using persistent undo also lets you undo in multiple
-" files even in the same window, but is less efficient and is actually designed
-" for keeping undo history after closing Vim entirely. Vim will complain if you
-" try to quit without saving, and swap files will keep you safe if your computer
-" crashes.
+" Re-use the same window and switch from an unsaved buffer without saving it first
 set hidden
-
-" Note that not everyone likes working this way (with the hidden option).
-" Alternatives include using tabs or split windows instead of re-using the same
-" window as mentioned above, and/or either of the following options:
-" set confirm
-" set autowriteall
 
 " Better command-line completion
 set wildmenu
@@ -33,11 +18,6 @@ set showcmd
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
-
-" Modelines have historically been a source of security vulnerabilities. As
-" such, it may be a good idea to disable them and use the securemodelines
-" script, <http://www.vim.org/scripts/script.php?script_id=1876>.
-" set nomodeline
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -113,8 +93,6 @@ set esckeys
 " Optimize for fast terminal connections
 set ttyfast
 
-" Add the g flag to search/replace by default
-set gdefault
 
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
@@ -132,53 +110,16 @@ if exists("&undodir")
    set undodir=~/.vim/undo
 endif
 
-" Respect modeline in files
-set modeline
-set modelines=4
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
-
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=4
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
-" Highlight searches
-set hlsearch
-" Ignore case of searches
-set ignorecase
-" Highlight dynamically as pattern is typed
-set incsearch
-" Always show status line
-set laststatus=2
-" Enable mouse in all modes
-set mouse=a
-" Disable error bells
-set noerrorbells
-" Don't reset cursor to start of line when moving around.
-set nostartofline
-" Show the cursor position
-set ruler
-" Don't show the intro message when starting Vim
-set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
 set title
-" Show the (partial) command as it’s being typed
-set showcmd
-" Use relative line numbers
-"if exists("&relativenumber")
- "   set relativenumber
- "   au BufReadPost * set relativenumber
-"endif
-"
-" Start scrolling three lines before the horizontal window border
-set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
@@ -208,52 +149,30 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
 Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
+" My bundles
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
-" Bundle 'joonty/vim-phpqa.git'
-
-" vim-scripts repos
-" Bundle 'L9'
-
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
-
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
 
 syntax enable
 set background=dark
 colorscheme solarized
 
-if has('gui_running')
-    set background=dark
-else
-    set background=dark
-endif
 
 " Open NERDTree on CTRL + n
 map <C-n> :NERDTreeToggle<CR>
 
+
 " CTRL + p
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+" Set no max file limit
+let g:ctrlp_max_files = 0
+" Search from current directory instead of project root
+let g:ctrlp_working_path_mode = 'ra'
+
 
 " Hide Windows EOL
 set fileformats=unix,dos
