@@ -78,7 +78,7 @@ set t_vb=
 set mouse=a
 
 " Set the command window height to 2 lines, to avoid many cases of having to
-" "press <Enter> to continue"
+" press <Enter> to continue"
 set cmdheight=2
 
 " Display line numbers on the left
@@ -95,11 +95,6 @@ set pastetoggle=<F11>
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-" Indentation settings for using hard tabs for indent. Display tabs as
-" two characters wide.
-"set shiftwidth=4
-"set tabstop=4
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
@@ -130,7 +125,7 @@ let mapleader=","
 " Don't add empty newlines at the end of files
 set binary
 set noeol
-" " Centralize backups, swapfiles and undo history
+" Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
@@ -140,7 +135,7 @@ endif
 " Respect modeline in files
 set modeline
 set modelines=4
-" " Enable per-directory .vimrc files and disable unsafe commands in them
+" Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
 
