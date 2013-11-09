@@ -7,54 +7,47 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " Bundle that I use
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'bling/vim-airline'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-unimpaired'
 "--------------------------------------------------------------
 
 " SETTINGS
-set nocompatible
+set background=dark
+set confirm
+set cursorline " Highlight current line
+set esckeys " Allow cursor keys in insert mode
 set hidden
 set hlsearch
 set ignorecase
-set smartcase
-set visualbell
-set confirm
-set mouse=a
-set number
 set infercase " Ignore case in autocompletion
-set nostartofline " Stop certain movements from always going to the first character of a line.
-set pastetoggle=<F11> " Use <F11> to toggle between 'paste' and 'nopaste'
-"-- Indentation settings for using 4 spaces instead of tabs.
-set smartindent
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set tabstop=4
-set showmatch
-set smarttab
-" --
-set esckeys " Allow cursor keys in insert mode
-set ttyfast " Optimize for fast terminal connections
+set list
+set mouse=a
+set nocompatible
 set noeol
+set nostartofline " Stop certain movements from always going to the first character of a line.
+set number
+set pastetoggle=<F11> " Use <F11> to toggle between 'paste' and 'nopaste'
+set showmatch " When a bracket is inserted, briefly jump to the matching one
+set showmode
+set smartcase
+"-- Indentation settings for using 4 spaces instead of tabs
+set smartindent shiftwidth=4 softtabstop=4 expandtab tabstop=4
+set smarttab
+set t_Co=256
+set title
+set visualbell
+colorscheme solarized
 "-- Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
-"--
-set cursorline " Highlight current line
-set list
-set showmode
-set title
-set t_Co=256
-set background=dark
-colorscheme solarized
 "-----------------------------------------------------------
 
 " PLUGINS
