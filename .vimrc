@@ -40,7 +40,6 @@ set smarttab
 " --
 set esckeys " Allow cursor keys in insert mode
 set ttyfast " Optimize for fast terminal connections
-set binary " Don't add empty newlines at the end of files
 set noeol
 "-- Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
