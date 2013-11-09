@@ -9,7 +9,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-sensible'
@@ -55,11 +55,9 @@ endif
 	map <C-n> :NERDTreeToggle<CR> " Mapping for opening NERDTree
 
 	" CTRL + p
-	let g:ctrlp_map = '<c-p>'
-	let g:ctrlp_cmd = 'CtrlP'
-	let g:ctrlp_max_files = 0 " Set no max file limit
-	let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
-	map <C-B> :CtrlPBuffer<CR> " Buffer Listing
+	" let g:ctrlp_max_files = 0 " Set no max file limit
+	" let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
+	" map <C-B> :CtrlPBuffer<CR> " Buffer Listing
 
 "------------------------------------------------------------
 
