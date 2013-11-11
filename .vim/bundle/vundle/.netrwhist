@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/yfernandez/phase3'
+let g:netrw_dirhist_2='/var/www/phase3'
+let g:netrw_dirhist_3='/var/www/phase3/website'
+let g:netrw_dirhist_4='/home/yfernandez/Downloads/May_Licensee_Newsletter_Reporting_May_10'
+let g:netrw_dirhist_5='/home/yfernandez/petvenn'
+let g:netrw_dirhist_6='/home/yfernandez/www/projects/Requests/library/Requests'
+let g:netrw_dirhist_7='/home/yfernandez/www/projects/Requests/library'
+let g:netrw_dirhist_8='/home/yfernandez/Downloads/code/files/mvc'

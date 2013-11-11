@@ -5,11 +5,16 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-" Bundle that I use
+" Bundles that I use
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+Bundle "tomtom/tlib_vim"
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'git://git.wincent.com/command-t.git'
 " Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-sensible'
@@ -70,5 +75,4 @@ endif
 
 	" Save a file as root (\W)
 	noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
 " ------------------------------------------------------------
