@@ -11,13 +11,15 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tomtom/tlib_vim"
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-airline'
 Bundle 'git://git.wincent.com/command-t.git'
 " Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 "--------------------------------------------------------------
 
@@ -51,28 +53,38 @@ colorscheme solarized
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+    set undodir=~/.vim/undo
 endif
 "-----------------------------------------------------------
 
 " PLUGINS
-	" NERDTree
-	map <C-n> :NERDTreeToggle<CR> " Mapping for opening NERDTree
+    " NERDTree
+    map <C-n> :NERDTreeToggle<CR> " Mapping for opening NERDTree
 
-	" CTRL + p
-	" let g:ctrlp_max_files = 0 " Set no max file limit
-	" let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
-	" map <C-B> :CtrlPBuffer<CR> " Buffer Listing
+    " CTRL + p
+    " let g:ctrlp_max_files = 0 " Set no max file limit
+    " let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
+    " map <C-B> :CtrlPBuffer<CR> " Buffer Listing
 
 "------------------------------------------------------------
 
 " CUSTOM MAPPINGS/REMAPPINGS
-	" Disable Arrow Keys
-	noremap <Up> <Nop>
-	noremap <Down> <Nop>
-	noremap <Left> <Nop>
-	noremap <Right> <Nop>
+    " Disable Arrow Keys
+    noremap <Up> <Nop>
+    noremap <Down> <Nop>
+    noremap <Left> <Nop>
+    noremap <Right> <Nop>
 
-	" Save a file as root (\W)
-	noremap <leader>W :w !sudo tee % > /dev/null<CR>
+    " Save a file as root (\W)
+    noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+    " Disable :hlsearch highlighting with CTRL+L
+    nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+    " Airline
+    "let g:airline_powerline_fonts = 1
+    "if !exists('g:airline_symbols')
+          "let g:airline_symbols = {}
+    "endif
+    "let g:airline_symbols.space = "\ua0"
 " ------------------------------------------------------------
