@@ -12,7 +12,7 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tomtom/tlib_vim"
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
+" Bundle 'bling/vim-airline'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'godlygeek/tabular'
 Bundle 'joonty/vim-phpqa.git'
@@ -105,11 +105,11 @@ endif
     nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
     " Airline
-    let g:airline_powerline_fonts = 1
-    if !exists('g:airline_symbols')
-          let g:airline_symbols = {}
-    endif
-    let g:airline_symbols.space = "\ua0"
+    "let g:airline_powerline_fonts = 1
+    "if !exists('g:airline_symbols')
+          "let g:airline_symbols = {}
+    "endif
+    "let g:airline_symbols.space = "\ua0"
 
     " PHP QA Tools
     let g:phpqa_messdetector_ruleset = '~/.vim/misc/phpmd-ruleset.xml' " Ruleset file for PHPMD
@@ -117,4 +117,21 @@ endif
     let g:phpqa_messdetector_autorun = 0                             " Don't run PHPMD on save
     let g:phpqa_codesniffer_autorun  = 0                             " Don't run PHPCS on save
 
+    " Mappings for easy Tab Alignment
+    if exists(":Tabularize")
+        nmap <Leader>a= :Tabularize /=<CR>
+        vmap <Leader>a= :Tabularize /=<CR>
+        nmap <Leader>a: :Tabularize /:\zs<CR>
+        vmap <Leader>a: :Tabularize /:\zs<CR>
+    endif
+
 " ------------------------------------------------------------
+
+" STATUS LINE
+set statusline=
+set statusline+=%<\                       " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
+set statusline+=%-40f\                    " path
+set statusline+=%=%1*%y%*%*\              " file type
+set statusline+=%10((%l,%c)%)\            " line and column
+set statusline+=%P                        " percentage of file
