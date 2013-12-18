@@ -7,6 +7,7 @@ set background=dark
 set confirm
 " Highlight current line
 set cursorline
+set encoding=utf-8
 " Allow cursor keys in insert mode
 set esckeys
 set hidden
