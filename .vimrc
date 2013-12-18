@@ -30,11 +30,7 @@ set t_Co=256
 set title
 set visualbell
 " Using 4 spaces instead of tabs {{{2
-set smartindent
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set tabstop=4
+set smartindent shiftwidth=4 softtabstop=4 expandtab tabstop=4
 
 colorscheme solarized
 
@@ -87,8 +83,10 @@ endif
     endif
 
     if exists(":CtrlP")
+        let g:ctrlp_map = '<leader>p'
         let g:ctrlp_max_files = 0 " Set no max file limit
         let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
+        map <leader>t :CtrlP<CR>
         map <leader>b :CtrlPBuffer<CR> " Buffer Listing
     endif
 
