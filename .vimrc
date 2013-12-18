@@ -4,7 +4,6 @@ source ~/.vim/bundles.vim
 
 " Personal Settings {{{1
 set background=dark
-set cc=80,120
 set confirm
 " Highlight current line
 set cursorline
@@ -92,14 +91,31 @@ endif
     map <leader>n :NERDTreeToggle<CR> " Mapping for opening NERDTree
 
 " STATUS LINE {{{1
-set statusline=
-set statusline+=%<\                       " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
-set statusline+=%-40f\                    " path
-set statusline+=%=%1*%y%*%*\              " file type
-set statusline+=%10((%l,%c)%)\            " line and column
-set statusline+=%P                        " percentage of file
+if (exists('g:loaded_airline') && g:loaded_airline)
+    let g:airline_powerline_fonts = 1
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    let g:airline_symbols.space = "\ua0"
+else
+    set statusline=
+    set statusline+=%<\                       " cut at start
+    set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
+    set statusline+=%-40f\                    " path
+    set statusline+=%=%1*%y%*%*\              " file type
+    set statusline+=%10((%l,%c)%)\            " line and column
+    set statusline+=%P                        " percentage of file
+endif
 
+if exists(":CtrlP")
+    let g:ctrlp_max_files = 0 " Set no max file limit
+    let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
+    map <leader>b :CtrlPBuffer<CR> " Buffer Listing
+endif
+
+if (v:version > 702)
+    set cc=80,120
+endif
 " Optional Setups {{{1
 if filereadable(expand("~/.vimrc.after"))
     source ~/.vimrc.after

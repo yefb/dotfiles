@@ -13,7 +13,7 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tomtom/tlib_vim"
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'bling/vim-airline'
 Bundle 'godlygeek/tabular'
 Bundle 'joonty/vim-phpqa.git'
 Bundle 'markwu/vim-laravel4-snippets'
@@ -25,3 +25,9 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+
+if v:version > 702
+    Bundle 'git://git.wincent.com/command-t.git'
+else
+    Bundle 'kien/ctrlp.vim'
+endif
