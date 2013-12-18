@@ -98,8 +98,6 @@ endif
     map <leader>s :AirlineToggle<CR>
 
     " Vim Airline - Status Line
-    if (exists('g:loaded_airline') && g:loaded_airline)
-
         if !exists('g:airline_symbols')
             let g:airline_symbols = {}
         endif
@@ -128,7 +126,6 @@ endif
         let g:airline_symbols.readonly = ''
         let g:airline_symbols.linenr = ''
 
-    else
         set statusline=
         set statusline+=%<\                       " cut at start
         set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
@@ -136,4 +133,3 @@ endif
         set statusline+=%=%1*%y%*%*\              " file type
         set statusline+=%10((%l,%c)%)\            " line and column
         set statusline+=%P                        " percentage of file
-    endif
