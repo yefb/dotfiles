@@ -1,0 +1,27 @@
+snippet	tt
+	BEGIN
+		PERFORM sl.sql_ins_lookup_${1:term|namespace}s ('$1', '''${2:term value}''');
+	EXCEPTION
+		WHEN unique_violation
+		THEN
+		NULL;
+	END;
+
+snippet	ttd
+	BEGIN
+		PERFORM sl.sql_ins_term_defaults ('namespace, term, term_text', '''${1:namespace}'', ''${2:term}'', ''${3}''');
+	EXCEPTION
+		WHEN unique_violation
+		THEN
+		PERFORM sl.sql_upd_term_defaults ('namespace = ''$1'', term = ''$2'', term_text = ''${3}''', 'namespace = ''$1'' AND term = ''$2''');
+	END;
+
+snippet	proc
+	DO
+	$body$
+	BEGIN
+
+		${1}
+
+	END;
+	$body$
