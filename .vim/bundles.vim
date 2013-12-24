@@ -26,6 +26,7 @@ Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 
+" I'm using CommandT in a newer version
 if v:version > 702
     Bundle 'git://git.wincent.com/command-t.git'
 else

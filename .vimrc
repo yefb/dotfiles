@@ -1,5 +1,3 @@
-" vim: nowrap fdm=marker
-
 source ~/.vim/bundles.vim
 
 " Personal Settings {{{1
@@ -79,14 +77,13 @@ endif
     let g:phpqa_codesniffer_autorun  = 0                             " Don't run PHPCS on save
 
     " Mappings for easy Tab Alignment
-    if exists(":Tabularize")
-        nmap <Leader>a= :Tabularize /=<CR>
-        vmap <Leader>a= :Tabularize /=<CR>
-        nmap <Leader>a: :Tabularize /:\zs<CR>
-        vmap <Leader>a: :Tabularize /:\zs<CR>
-    endif
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a: :Tabularize /:\zs<CR>
+    vmap <Leader>a: :Tabularize /:\zs<CR>
 
-    if exists(":CtrlP")
+    " I'm using CommandT in a newer version
+    if v:version <= 702
         let g:ctrlp_max_files = 0 " Set no max file limit
         let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
         map <leader>b :CtrlPBuffer<CR> " Buffer Listing
@@ -99,6 +96,13 @@ endif
     map <leader>s :AirlineToggle<CR>
 
     " Vim Airline - Status Line
+        set statusline=
+        set statusline+=%<\                       " cut at start
+        set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
+        set statusline+=%-40f\                    " path
+        set statusline+=%=%1*%y%*%*\              " file type
+        set statusline+=%10((%l,%c)%)\            " line and column
+        set statusline+=%P                        " percentage of file
         if !exists('g:airline_symbols')
             let g:airline_symbols = {}
         endif
@@ -126,11 +130,3 @@ endif
         let g:airline_symbols.branch = ''
         let g:airline_symbols.readonly = ''
         let g:airline_symbols.linenr = ''
-
-        set statusline=
-        set statusline+=%<\                       " cut at start
-        set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
-        set statusline+=%-40f\                    " path
-        set statusline+=%=%1*%y%*%*\              " file type
-        set statusline+=%10((%l,%c)%)\            " line and column
-        set statusline+=%P                        " percentage of file
