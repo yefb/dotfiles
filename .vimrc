@@ -1,4 +1,4 @@
-source ~/.vim/bundles.vim
+" source ~/.vim/bundles.vim
 
 " Personal Settings {{{1
 set background=dark
@@ -54,14 +54,14 @@ endif
     let mapleader = ","
 
     " Disable Arrow Keys in Normal Mode
-    noremap <Up> <Nop>
-    noremap <Down> <Nop>
-    noremap <Left> <Nop>
-    noremap <Right> <Nop>
+    " noremap <Up> <Nop>
+    " noremap <Down> <Nop>
+    " noremap <Left> <Nop>
+    " noremap <Right> <Nop>
 
     " Disable Arrow Keys in Ex Mode
-    cnoremap <C-p> <Up>
-    cnoremap <C-n> <Down>
+    " cnoremap <C-p> <Up>
+    " cnoremap <C-n> <Down>
 
     " Save a file as root (,W)
     noremap <leader>W :w !sudo tee % > /dev/null<CR>
