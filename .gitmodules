@@ -1,12 +1,6 @@
 [submodule ".vim/pack/yefb/start/vim-airline"]
 	path = .vim/pack/yefb/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/pack/yefb/start/vim-snipmate"]
-	path = .vim/pack/yefb/start/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate
-[submodule ".vim/pack/yefb/start/vim-snippets"]
-	path = .vim/pack/yefb/start/vim-snippets
-	url = https://github.com/honza/vim-snippets
 [submodule ".vim/pack/yefb/start/tlib_vim"]
 	path = .vim/pack/yefb/start/tlib_vim
 	url = https://github.com/tomtom/tlib_vim
