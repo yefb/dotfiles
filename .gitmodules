@@ -34,3 +34,6 @@
 [submodule ".vim/pack/yefb/start/vim-unimpaired"]
 	path = .vim/pack/yefb/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
+[submodule ".vim/pack/yefb/start/ctrlp"]
+	path = .vim/pack/yefb/start/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim
