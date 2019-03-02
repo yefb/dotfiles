@@ -1,0 +1,42 @@
+[submodule ".vim/pack/yefb/start/vim-airline"]
+	path = .vim/pack/yefb/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/yefb/start/vim-snipmate"]
+	path = .vim/pack/yefb/start/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate
+[submodule ".vim/pack/yefb/start/vim-snippets"]
+	path = .vim/pack/yefb/start/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule ".vim/pack/yefb/start/tlib_vim"]
+	path = .vim/pack/yefb/start/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule ".vim/pack/yefb/start/vim-colors-solarized"]
+	path = .vim/pack/yefb/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule ".vim/pack/yefb/start/tabular"]
+	path = .vim/pack/yefb/start/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule ".vim/pack/yefb/start/nerdcommenter"]
+	path = .vim/pack/yefb/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule ".vim/pack/yefb/start/nerdtree"]
+	path = .vim/pack/yefb/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/pack/yefb/start/vim-space"]
+	path = .vim/pack/yefb/start/vim-space
+	url = https://github.com/spiiph/vim-space
+[submodule ".vim/pack/yefb/start/vim-fugitive"]
+	path = .vim/pack/yefb/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/yefb/start/vim-repeat"]
+	path = .vim/pack/yefb/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule ".vim/pack/yefb/start/vim-sensible"]
+	path = .vim/pack/yefb/start/vim-sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule ".vim/pack/yefb/start/vim-surround"]
+	path = .vim/pack/yefb/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/pack/yefb/start/vim-unimpaired"]
+	path = .vim/pack/yefb/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
