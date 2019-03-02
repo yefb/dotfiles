@@ -82,14 +82,11 @@ endif
     nmap <Leader>a: :Tabularize /:\zs<CR>
     vmap <Leader>a: :Tabularize /:\zs<CR>
 
-    " I'm using CommandT in a newer version
-    if v:version <= 702
-        let g:ctrlp_max_files = 0 " Set no max file limit
-        let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
-        map <leader>t :CtrlP<CR>
-        " Buffer Listing
-        map <leader>b :CtrlPBuffer<CR>
-    endif
+    let g:ctrlp_max_files = 0 " Set no max file limit
+    let g:ctrlp_working_path_mode = 0 " Search from current directory instead of project root
+    map <leader>t :CtrlP<CR>
+    " Buffer Listing
+    map <leader>b :CtrlPBuffer<CR>
 
     " NERDTree
     map <leader>n :NERDTreeToggle<CR> " Mapping for opening NERDTree
